@@ -19,3 +19,6 @@ btn.addEventListener('click', function(){
     }
  
 })
+
+
+let btnpari = document.getElementById('invia')
