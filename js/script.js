@@ -26,6 +26,10 @@ let btnpari = document.getElementById('invia')
 btnpari.addEventListener('click',function(){
    let sceltautente= document.getElementById('paridispari').value;
    console.log(sceltautente)
+   let numeroutente = document.getElementById('usernumberpar').value;
+   console.log(numeroutente)
+   let numeropc =getRandomNumber(1, 5)
+   console.log(numeropc)
 
 })
 
