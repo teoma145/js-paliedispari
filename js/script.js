@@ -27,7 +27,7 @@ btnpari.addEventListener('click',function(){
    let sceltautente= document.getElementById('paridispari').value;
    let paridispariel = document.getElementById('paridisparitext');
    
-   let numeroutente = document.getElementById('usernumberpar').value;
+   let numeroutente = parseInt(document.getElementById('usernumberpar').value);
    console.log(numeroutente)
    let numeropc =getRandomNumber(1, 5)
    console.log(numeropc)
@@ -37,13 +37,30 @@ btnpari.addEventListener('click',function(){
    else{
     paridispariel.innerHTML=`il pc sceglie dispari e butta ${numeropc}`
    }
-
-
+   let risultato = sommaparidispari(numeroutente,numeropc)
+   
+   let winner = evennoteven(risultato)
+   if(sceltautente === winner){
+    paridispariel.innerHTML += `  ,Hai vinto`
+   }
+   else{
+    paridispariel.innerHTML += `  ,Hai perso`
+   }
 })
 
 
-
-
+function evennoteven (risultato){
+    if(risultato % 2 === 0){
+        return 'pari';
+    }
+    else{
+        return 'dispari';
+    }
+}
+function sommaparidispari(numeroutente,numeropc){
+   let numerofinale = numeroutente + numeropc
+   return numerofinale
+}
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
