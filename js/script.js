@@ -1,5 +1,5 @@
 let btn = document.getElementById('button');
-
+let palindromatext=document.getElementById('palindromatext')
 
 
 btn.addEventListener('click', function(){
@@ -10,6 +10,12 @@ btn.addEventListener('click', function(){
     checkpalindromo += palindromael[i];
     console.log(checkpalindromo)
 }
+    if(checkpalindromo===palindromael){
+       palindromatext.innerHTML=`La tua parola è palindroma`
+    }
     
+    else{
+        palindromatext.innerHTML=`la tua parola non è palindroma`
+    }
  
 })
