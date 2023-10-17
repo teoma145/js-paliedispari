@@ -22,3 +22,16 @@ btn.addEventListener('click', function(){
 
 
 let btnpari = document.getElementById('invia')
+
+btnpari.addEventListener('click',function(){
+   let sceltautente= document.getElementById('paridispari').value;
+   console.log(sceltautente)
+
+})
+
+
+
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
