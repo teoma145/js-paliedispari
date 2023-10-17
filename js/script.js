@@ -3,7 +3,7 @@ let palindromatext=document.getElementById('palindromatext')
 
 
 btn.addEventListener('click', function(){
-    let palindromael = document.getElementById('palindromael').value;
+    let palindromael = document.getElementById('palindromael').value.toLowerCase();
     
     let checkpalindromo='';
     for(let i = palindromael.length-1 ; i >= 0; i--){
@@ -40,7 +40,10 @@ btnpari.addEventListener('click',function(){
    let risultato = sommaparidispari(numeroutente,numeropc)
    
    let winner = evennoteven(risultato)
-   if(sceltautente === winner){
+   if(numeroutente > 5 ||numeroutente <=0 ){
+    paridispariel.innerHTML=`scegli un numero da 1 a 5 e riprova!`
+}
+   else if(sceltautente === winner){
     paridispariel.innerHTML += `  ,Hai vinto`
    }
    else{
