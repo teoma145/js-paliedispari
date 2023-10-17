@@ -25,11 +25,19 @@ let btnpari = document.getElementById('invia')
 
 btnpari.addEventListener('click',function(){
    let sceltautente= document.getElementById('paridispari').value;
-   console.log(sceltautente)
+   let paridispariel = document.getElementById('paridisparitext');
+   
    let numeroutente = document.getElementById('usernumberpar').value;
    console.log(numeroutente)
    let numeropc =getRandomNumber(1, 5)
    console.log(numeropc)
+   if(sceltautente=== "pari"){
+    paridispariel.innerHTML=`il pc sceglie dispari e butta ${numeropc}`
+   }
+   else{
+    paridispariel.innerHTML=`il pc sceglie dispari e butta ${numeropc}`
+   }
+
 
 })
 
